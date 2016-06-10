@@ -9,7 +9,7 @@ ENV HOME ${SONAR_SCANNER_HOME}
 WORKDIR /opt
 
 RUN apk update \
-  && apk add sh bash wget ca-certificates unzip \
+  && apk add bash wget ca-certificates unzip \
   && wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/${SONAR_SCANNER_PACKAGE} \
   && unzip ${SONAR_SCANNER_PACKAGE} \
   && rm ${SONAR_SCANNER_PACKAGE}
